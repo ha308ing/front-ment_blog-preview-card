@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
-import { BlogTileContext } from "../BlogTile";
-import { PropsWithChildren } from "react";
+import { PostTileContext as Context } from "../../PostTile";
+import { type FC } from "react";
 
 const months: Record<number, string> = {
   1: "Jan",
@@ -17,20 +17,17 @@ const months: Record<number, string> = {
   12: "Dec",
 };
 
-function PubDate(props: PropsWithChildren) {
-  return (
-    <BlogTileContext.Consumer>
-      {({ data }) => {
-        const { pubdate } = data;
-        return (
-          <div {...props}>
-            Published {pubdate.day} {months[pubdate.month]} {pubdate.year}
-          </div>
-        );
-      }}
-    </BlogTileContext.Consumer>
-  );
-}
+const PubDate: FC = props => (
+  <Context.Consumer>
+    {({ pubdate }) => {
+      return (
+        <div {...props}>
+          Published {pubdate.day} {months[pubdate.month]} {pubdate.year}
+        </div>
+      );
+    }}
+  </Context.Consumer>
+);
 
 const PubDateStyled = styled(PubDate)`
   text-align: left;
@@ -38,8 +35,9 @@ const PubDateStyled = styled(PubDate)`
   font-size: 0.875em;
   letter-spacing: -0.2px;
   word-spacing: 1px;
+
   @media (min-width: 1440px) {
-  letter-spacing: -0.1px;
+    letter-spacing: -0.1px;
     margin-bottom: 20px;
     font-weight: 500;
     letter-spacing: -0.1px;
