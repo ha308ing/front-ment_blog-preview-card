@@ -9,7 +9,7 @@ function Tag(props: PropsWithChildren) {
 const TagStyled = styled(Tag)`
   font-weight: 800;
   background-color: #f6d050;
-  padding: 6px 12px 7px 12px;
+  padding: 6px 12px 7px;
   display: inline-block;
   border-radius: 4px;
   text-decoration: none;
@@ -23,8 +23,12 @@ const TagStyled = styled(Tag)`
     color: #000;
   }
   &:focus-visible {
-    color: red;
+    color: #000;
     outline: 2px solid #000 !important;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 7px 13px;
   }
 `;
 
@@ -52,8 +56,10 @@ const TagsStyled = styled(Tags)`
   display: flex;
   font-size: 0.875em;
   flex-flow: row nowrap;
-  /* margin-bottom: 1rem; */
   margin-bottom: 1em;
+  @media (min-width: 1440px) {
+    margin-bottom: 14px;
+  }
 `;
 
 export default TagsStyled;

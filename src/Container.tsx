@@ -7,10 +7,13 @@ const Container = styled.div`
   place-content: center;
   place-items: center;
   background-color: #f6d050;
-  /* padding: 0 5rem; */
   text-align: center;
-  position:relative;
-  top: 22px;
+  position: relative;
+  top: 7px;
+
+  @media (min-width: 1440px) {
+    top: 5px;
+  }
 `;
 
 export default Container;

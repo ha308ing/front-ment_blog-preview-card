@@ -3,13 +3,10 @@ import { BlogTileContext } from "../BlogTile";
 import { PropsWithChildren } from "react";
 
 const PicStyled = styled.img`
-  /* margin-bottom: 1.5rem; */
   max-width: fit-content;
 `;
 
 function PicContainer(props: PropsWithChildren) {
-  // const { data } = useContext(BlogTileContext);
-  // return <img src={data.pic} />;
   return (
     <BlogTileContext.Consumer>
       {({ data }) => (
@@ -25,10 +22,13 @@ const PicContainerStyled = styled(PicContainer)`
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 24px;
-  /* width: 100%; */
   display: flex;
   place-content: center;
   place-items: center;
+
+  @media (min-width: 1440px) {
+    margin-bottom: 24px;
+  }
 `;
 
 export default PicContainerStyled;

@@ -6,7 +6,6 @@ const StyledLink = styled.a`
   text-decoration: none;
   cursor: pointer;
   color: black;
-  letter-spacing:-.5px;
 
   &:hover {
     color: #f6d050;
@@ -32,9 +31,15 @@ const TitleStyled = styled(Title)`
   font-size: 21px;
   font-weight: 800;
   margin: 0;
-  /* margin-bottom: 1.875rem; */
   margin-bottom: 17px;
   line-height: 1;
+  letter-spacing:-.5px;
+
+  @media (min-width: 1440px) {
+    margin-bottom: 18px;
+    font-size: 24px;
+    letter-spacing: normal;
+  }
 `;
 
 export default TitleStyled;

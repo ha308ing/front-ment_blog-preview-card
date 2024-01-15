@@ -56,6 +56,10 @@ const AuthorStyled = styled(Author)`
   & img {
     margin-right: 0.75rem;
   }
+  @media (min-width: 1440px) {
+    letter-spacing: normal;
+    font-size: 14px;
+  }
 `;
 
 export default AuthorStyled;

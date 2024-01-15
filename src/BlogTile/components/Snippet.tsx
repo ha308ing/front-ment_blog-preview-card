@@ -18,6 +18,10 @@ const SnippetStyled = styled(Snippet)`
   margin-bottom: 1.5rem;
   line-height: 1.5;
   font-weight: 600;
+  @media (min-width: 1440px) {
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
 `;
 
 export default SnippetStyled;

@@ -9,7 +9,7 @@ const data = {
   pubdate: { year: 2023, month: 12, day: 21 },
   title: "HTML & CSS foundations",
   snippet:
-    "These languages are the backbone of every website, defining structure, content and presentation.",
+    "These languages are the backbone of every website, defining structure, content, and presentation.",
   author: { avatar, name: "Greg Hooper" },
 };
 

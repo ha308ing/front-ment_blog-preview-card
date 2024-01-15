@@ -17,10 +17,6 @@ const months: Record<number, string> = {
   12: "Dec",
 };
 
-const StyledDate = styled.span`
-  letter-spacing:-0.5px;
-`
-
 function PubDate(props: PropsWithChildren) {
   return (
     <BlogTileContext.Consumer>
@@ -42,6 +38,12 @@ const PubDateStyled = styled(PubDate)`
   font-size: 0.875em;
   letter-spacing: -0.2px;
   word-spacing: 1px;
+  @media (min-width: 1440px) {
+  letter-spacing: -0.1px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: -0.1px;
+  }
 `;
 
 export default PubDateStyled;
