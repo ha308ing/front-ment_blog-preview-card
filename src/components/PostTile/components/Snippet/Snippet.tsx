@@ -1,11 +1,11 @@
-import { type FC } from "react";
 import { PostTileContext as Context } from "../../PostTile";
 import styled from "styled-components";
+import { type PropsWithChildrenClassName } from "react";
 
-const Snippet: FC = props => (
+const Snippet = ({ className }: PropsWithChildrenClassName) => (
   <Context.Consumer>
     {({ snippet }) => {
-      return <div {...props}>{snippet}</div>;
+      return <div className={className}>{snippet}</div>;
     }}
   </Context.Consumer>
 );

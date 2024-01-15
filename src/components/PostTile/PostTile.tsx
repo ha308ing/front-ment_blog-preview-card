@@ -1,4 +1,4 @@
-import { createContext, type FC } from "react";
+import { type PropsWithChildrenClassName, createContext } from "react";
 
 import Pic from "./components/Thumbnail";
 import Tags from "./components/Tags";
@@ -9,7 +9,7 @@ import Author from "./components/Author";
 
 import { styled } from "styled-components";
 
-export type PostTileProps = {
+export type TPostTile = {
   postData: {
     link: string;
     tags: { name: string; link: string }[];
@@ -43,11 +43,14 @@ const dataDefault = {
 };
 
 export const PostTileContext =
-  createContext<PostTileProps["postData"]>(dataDefault);
+  createContext<TPostTile["postData"]>(dataDefault);
 
-const PostTile: FC<PostTileProps> = ({ postData, ...props }) => (
+const PostTile = ({
+  postData,
+  className,
+}: PropsWithChildrenClassName<TPostTile>) => (
   <PostTileContext.Provider value={{ ...postData }}>
-    <article {...props}>
+    <article className={className}>
       <Pic />
       <Tags />
       <PubDate />

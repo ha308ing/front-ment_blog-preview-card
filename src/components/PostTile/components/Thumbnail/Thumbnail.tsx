@@ -1,15 +1,15 @@
 import { styled } from "styled-components";
 import { PostTileContext as Context } from "../../PostTile";
-import { FC } from "react";
+import { type PropsWithChildrenClassName } from "react";
 
 const Image = styled.img`
   max-width: fit-content;
 `;
 
-const Thumbnail: FC = props => (
+const Thumbnail = ({ className }: PropsWithChildrenClassName) => (
   <Context.Consumer>
     {({ thumb }) => (
-      <div {...props}>
+      <div className={className}>
         <Image src={thumb} />
       </div>
     )}

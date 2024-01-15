@@ -1,3 +1,3 @@
 import AuthorName from "./AuthorName";
 
-export default AuthorName
+export default AuthorName;

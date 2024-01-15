@@ -4,4 +4,4 @@ const AuthorName = styled.span`
   font-weight: 800;
 `;
 
-export default AuthorName
+export default AuthorName;

@@ -1,15 +1,15 @@
-import { type FC } from "react";
 import { PostTileContext as Context } from "../../PostTile";
 import { styled } from "styled-components";
 
 import AuthorAvatar from "./AuthorAvatar";
 import AuthorName from "./AuthorName";
+import { type PropsWithChildrenClassName } from "react";
 
-const Author: FC = props => (
+const Author = ({ className }: PropsWithChildrenClassName) => (
   <Context.Consumer>
     {({ author }) => {
       return (
-        <a href={author.link} {...props}>
+        <a href={author.link} className={className}>
           <AuthorAvatar src={author.avatar} />
           <AuthorName>{author.name}</AuthorName>
         </a>
@@ -29,12 +29,12 @@ const AuthorStyled = styled(Author)`
 
   &:link,
   &:visited {
-    color: ${props=>props.theme.black};
+    color: ${props => props.theme.black};
   }
 
   &:hover,
   &:active {
-    color: ${props=>props.theme.primary};
+    color: ${props => props.theme.primary};
   }
 
   & img {

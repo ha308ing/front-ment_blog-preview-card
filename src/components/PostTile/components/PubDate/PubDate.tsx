@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import { PostTileContext as Context } from "../../PostTile";
-import { type FC } from "react";
+import { type PropsWithChildrenClassName } from "react";
 
 const months: Record<number, string> = {
   1: "Jan",
@@ -17,11 +17,11 @@ const months: Record<number, string> = {
   12: "Dec",
 };
 
-const PubDate: FC = props => (
+const PubDate = ({ className }: PropsWithChildrenClassName) => (
   <Context.Consumer>
     {({ pubdate }) => {
       return (
-        <div {...props}>
+        <div className={className}>
           Published {pubdate.day} {months[pubdate.month]} {pubdate.year}
         </div>
       );

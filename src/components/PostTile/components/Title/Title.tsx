@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { PostTileContext as Context } from "../../PostTile";
-import { type FC } from "react";
+import { type PropsWithChildrenClassName } from "react";
 
 const StyledLink = styled.a`
   text-decoration: none;
@@ -12,11 +12,11 @@ const StyledLink = styled.a`
   }
 `;
 
-const Title: FC = props => (
+const Title = ({ className }: PropsWithChildrenClassName) => (
   <Context.Consumer>
     {({ title }) => {
       return (
-        <h2 {...props}>
+        <h2 className={className}>
           <StyledLink href="#">{title}</StyledLink>
         </h2>
       );

@@ -1,6 +1,6 @@
+import { type PropsWithChildrenClassName } from "react";
 import { PostTileContext as Context } from "../../PostTile";
 import { styled } from "styled-components";
-import { type FC } from "react";
 
 const Tag = styled.a`
   font-weight: 800;
@@ -28,10 +28,10 @@ const Tag = styled.a`
   }
 `;
 
-const Tags: FC = props => (
+const Tags = ({ className }: PropsWithChildrenClassName) => (
   <Context.Consumer>
     {({ tags }) => (
-      <ul {...props}>
+      <ul className={className}>
         {tags.map(tag => (
           <li key={tag.link}>
             <Tag as="a" href={tag.link}>

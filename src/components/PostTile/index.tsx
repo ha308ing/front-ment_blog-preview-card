@@ -1,6 +1,8 @@
-import PostTile_, { type PostTileProps } from "./PostTile";
-import {type FC} from "react"
+import PostTile_, { type TPostTile } from "./PostTile";
+import { type PropsWithChildren } from "react";
 
-const PostTile:FC<PostTileProps> = (props) => <PostTile_ {...props} />;
+const PostTile = (props: PropsWithChildren<TPostTile>) => (
+  <PostTile_ postData={props.postData} />
+);
 
 export default PostTile;

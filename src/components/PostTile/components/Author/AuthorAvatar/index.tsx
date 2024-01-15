@@ -1,3 +1,3 @@
 import AuthorAvatar from "./AuthorAvatar";
 
-export default AuthorAvatar
+export default AuthorAvatar;

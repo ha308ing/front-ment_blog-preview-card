@@ -6,7 +6,7 @@ const Container = styled.main`
   flex-flow: row wrap;
   place-content: center;
   place-items: center;
-  background-color: ${props=>props.theme.primary};
+  background-color: ${props => props.theme.primary};
   text-align: center;
   padding: 3em 5em;
   gap: 3em;
