@@ -1,0 +1,42 @@
+name: action
+on: push
+jobs:
+  deploy:
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+      
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4.1.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+        
+      - name: setup node.js
+        uses: actions/setup-node@v4.0.1
+        with:
+          node-version: "18.x"
+
+      - name: configure github pages
+        uses: actions/configure-pages@v4.0.0
+
+      - run: npm install
+      - run: npm run build
+
+      - name: upload artifacts
+        uses: actions/upload-pages-artifact@v3.0.0
+        with:
+          path: '_site/'
+
+      - name: deploy
+        id: deployment
+        uses: actions/deploy-pages@v4.0.3
+
+      
