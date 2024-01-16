@@ -32,7 +32,7 @@ const TitleStyled = styled(Title)`
   line-height: 1;
   letter-spacing: -0.5px;
 
-  @media (min-width: 1440px) {
+  @media (width >= 1440px) {
     margin-bottom: 18px;
     font-size: 24px;
     letter-spacing: normal;

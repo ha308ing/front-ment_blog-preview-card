@@ -18,12 +18,13 @@ const Tag = styled.a`
   &:active {
     color: ${props => props.theme.black};
   }
+
   &:focus-visible {
     color: ${props => props.theme.black};
     outline: 2px solid ${props => props.theme.black} !important;
   }
 
-  @media (min-width: 1440px) {
+  @media (width >= 1440px) {
     padding: 7px 13px;
   }
 `;
@@ -51,7 +52,8 @@ const TagsStyled = styled(Tags)`
   font-size: 0.875em;
   flex-flow: row nowrap;
   margin-bottom: 1em;
-  @media (min-width: 1440px) {
+
+  @media (width >= 1440px) {
     margin-bottom: 14px;
   }
 `;

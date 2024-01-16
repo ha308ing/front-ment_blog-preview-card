@@ -22,7 +22,6 @@ const AuthorStyled = styled(Author)`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-
   text-decoration: none;
   max-width: fit-content;
   font-size: 1em;
@@ -41,7 +40,7 @@ const AuthorStyled = styled(Author)`
     margin-right: 0.75rem;
   }
 
-  @media (min-width: 1440px) {
+  @media (width >= 1440px) {
     letter-spacing: normal;
     font-size: 14px;
   }

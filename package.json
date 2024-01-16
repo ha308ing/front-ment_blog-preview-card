@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "prettier": "prettier --check ./src",
+    "stylelint": "stylelint './src/**/*.tsx'",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -27,8 +28,12 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "lefthook": "^1.5.6",
     "pixel-glass": "^1.0.13",
+    "postcss-styled-syntax": "^0.6.4",
     "prettier": "^3.2.2",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard": "^36.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
   }

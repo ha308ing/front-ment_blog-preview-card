@@ -36,8 +36,7 @@ const PubDateStyled = styled(PubDate)`
   letter-spacing: -0.2px;
   word-spacing: 1px;
 
-  @media (min-width: 1440px) {
-    letter-spacing: -0.1px;
+  @media (width >= 1440px) {
     margin-bottom: 20px;
     font-weight: 500;
     letter-spacing: -0.1px;

@@ -24,7 +24,7 @@ const ThumbnailStyled = styled(Thumbnail)`
   place-content: center;
   place-items: center;
 
-  @media (min-width: 1440px) {
+  @media (width >= 1440px) {
     margin-bottom: 24px;
   }
 `;

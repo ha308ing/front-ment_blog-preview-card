@@ -72,17 +72,15 @@ const PostTileStyled = styled(PostTile)`
   color: ${props => props.theme.black};
   border-color: ${props => props.theme.black};
   border-style: solid;
-
   padding: 22px;
   text-align: left;
   cursor: default;
-
   width: 325px;
   height: 500px;
   font-size: 14px;
   border-width: 1px;
 
-  @media (min-width: 1440px) {
+  @media (width >= 1440px) {
     padding: 23px;
     width: 384px;
     height: 522px;
