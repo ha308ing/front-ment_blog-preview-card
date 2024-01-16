@@ -27,12 +27,7 @@ const AuthorStyled = styled(Author)`
   font-size: 1em;
 
   & img {
-    margin-right: 0.75rem;
-  }
-
-  @media (width >= 1440px) {
-    letter-spacing: normal;
-    font-size: 14px;
+    margin-right: 0.75em;
   }
 `;
 

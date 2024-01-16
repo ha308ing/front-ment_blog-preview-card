@@ -23,10 +23,6 @@ const ThumbnailStyled = styled(Thumbnail)`
   display: flex;
   place-content: center;
   place-items: center;
-
-  @media (width >= 1440px) {
-    margin-bottom: 24px;
-  }
 `;
 
 export default ThumbnailStyled;

@@ -12,12 +12,11 @@ const Snippet = ({ className }: PropsWithChildrenClassName) => (
 
 const SnippetStyled = styled(Snippet)`
   color: ${props => props.theme.subtle};
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5em;
   line-height: 1.5;
   font-weight: 600;
 
   @media (width >= 1440px) {
-    margin-bottom: 24px;
     font-weight: 500;
   }
 `;

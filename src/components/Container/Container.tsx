@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 const Container = styled.main`
   min-height: 100vh;
   display: flex;
+  font-size: 14px;
   flex-flow: row wrap;
   place-content: center;
   place-items: center;

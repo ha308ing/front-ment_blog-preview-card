@@ -60,6 +60,11 @@ const PostTile = ({
 );
 
 const PostTileStyled = styled(PostTile)`
+  &,
+  & * {
+    transition: all 0.1s ease-in-out;
+  }
+
   & *:focus-visible {
     outline: 2px solid ${props => props.theme.primary};
   }
@@ -73,16 +78,13 @@ const PostTileStyled = styled(PostTile)`
   padding: 22px;
   text-align: left;
   cursor: default;
-  width: 325px;
-  height: 500px;
-  font-size: 14px;
+  max-width: 325px;
+  font-size: clamp(1em, 0.9em + 1vw * 0.25, 1.5em);
   border-width: 1px;
 
   @media (width >= 1440px) {
     padding: 23px;
-    width: 384px;
-    height: 522px;
-    font-size: 16px;
+    max-width: 384px;
     box-shadow: 8px 8px ${props => props.theme.black};
   }
 `;

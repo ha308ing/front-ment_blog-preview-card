@@ -16,7 +16,7 @@ const Title = ({ className }: PropsWithChildrenClassName) => (
 );
 
 const TitleStyled = styled(Title)`
-  font-size: 21px;
+  font-size: 1.5em;
   font-weight: 800;
   margin: 0;
   margin-bottom: 17px;
@@ -25,7 +25,6 @@ const TitleStyled = styled(Title)`
 
   @media (width >= 1440px) {
     margin-bottom: 18px;
-    font-size: 24px;
     letter-spacing: normal;
   }
 `;

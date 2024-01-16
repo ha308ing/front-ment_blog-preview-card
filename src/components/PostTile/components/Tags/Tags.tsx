@@ -51,11 +51,7 @@ const TagsStyled = styled(Tags)`
   display: flex;
   font-size: 0.875em;
   flex-flow: row nowrap;
-  margin-bottom: 1em;
-
-  @media (width >= 1440px) {
-    margin-bottom: 14px;
-  }
+  margin-bottom: 14px;
 `;
 
 export default TagsStyled;
