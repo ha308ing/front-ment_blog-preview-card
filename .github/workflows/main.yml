@@ -33,7 +33,7 @@ jobs:
       - name: upload artifacts
         uses: actions/upload-pages-artifact@v3.0.0
         with:
-          path: '_site/'
+          path: './dist'
 
       - name: deploy
         id: deployment
