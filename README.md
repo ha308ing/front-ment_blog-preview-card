@@ -1,30 +1,24 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Blog preview card solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Blog preview card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS).
 
-Currently, two official plugins are available:
+Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Screenshots
 
-## Expanding the ESLint configuration
+![desktop](https://i.postimg.cc/k5Wc4gY6/image.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![mobile](https://i.postimg.cc/k5PQkdMn/image.png)
 
-- Configure the top-level `parserOptions` property like this:
+## Built with
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://reactjs.org/)
+- [Styled Components](https://styled-components.com/)
+- Linters
+  - [ESLint](https://eslint.org/)
+  - [Stylelint](https://stylelint.io/)
+- [Prettier](https://prettier.io/)
+- [Lefthook](https://github.com/evilmartians/lefthook)
+- [Pixel Glass](https://yoksel.github.io/pixel-glass-js/)
