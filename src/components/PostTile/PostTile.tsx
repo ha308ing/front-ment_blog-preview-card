@@ -1,12 +1,10 @@
 import { type PropsWithChildrenClassName, createContext } from "react";
-
 import Pic from "./components/Thumbnail";
 import Tags from "./components/Tags";
 import Title from "./components/Title";
 import PubDate from "./components/PubDate";
 import Snippet from "./components/Snippet";
 import Author from "./components/Author";
-
 import { styled } from "styled-components";
 
 export type TPostTile = {
