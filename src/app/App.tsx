@@ -1,5 +1,5 @@
 import Container from "@/components/Container";
-import PostTile from "@/components/PostTile";
+import PostPreview from "@/components/PostPreview";
 import "minireset.css";
 import "./App.css";
 import { posts } from "./posts";
@@ -11,7 +11,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Container>
         {posts.map((p, i) => (
-          <PostTile key={i} postData={p} />
+          <PostPreview key={i} postData={p} />
         ))}
       </Container>
     </ThemeProvider>

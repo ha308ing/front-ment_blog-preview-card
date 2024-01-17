@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PostTileContext as Context } from "../../PostTile";
+import { PostPreviewContext as Context } from "../../PostPreview";
 import { type PropsWithChildrenClassName } from "react";
 import Link from "@/components/Link";
 
@@ -7,9 +7,9 @@ const Title = ({ className }: PropsWithChildrenClassName) => (
   <Context.Consumer>
     {({ title }) => {
       return (
-        <h2 className={className}>
+        <h1 className={className}>
           <Link href="#">{title}</Link>
-        </h2>
+        </h1>
       );
     }}
   </Context.Consumer>

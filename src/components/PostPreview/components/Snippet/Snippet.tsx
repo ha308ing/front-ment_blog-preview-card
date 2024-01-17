@@ -1,4 +1,4 @@
-import { PostTileContext as Context } from "../../PostTile";
+import { PostPreviewContext as Context } from "../../PostPreview";
 import styled from "styled-components";
 import { type PropsWithChildrenClassName } from "react";
 

@@ -7,7 +7,7 @@ import Snippet from "./components/Snippet";
 import Author from "./components/Author";
 import { styled } from "styled-components";
 
-export type TPostTile = {
+export type TPostPreviewProps = {
   postData: {
     link: string;
     tags: { name: string; link: string }[];
@@ -40,14 +40,14 @@ const dataDefault = {
   },
 };
 
-export const PostTileContext =
-  createContext<TPostTile["postData"]>(dataDefault);
+export const PostPreviewContext =
+  createContext<TPostPreviewProps["postData"]>(dataDefault);
 
-const PostTile = ({
+const PostPreview = ({
   postData,
   className,
-}: PropsWithChildrenClassName<TPostTile>) => (
-  <PostTileContext.Provider value={{ ...postData }}>
+}: PropsWithChildrenClassName<TPostPreviewProps>) => (
+  <PostPreviewContext.Provider value={{ ...postData }}>
     <article className={className}>
       <Pic />
       <Tags />
@@ -56,10 +56,10 @@ const PostTile = ({
       <Snippet />
       <Author />
     </article>
-  </PostTileContext.Provider>
+  </PostPreviewContext.Provider>
 );
 
-const PostTileStyled = styled(PostTile)`
+const PostPreviewStyled = styled(PostPreview)`
   &,
   & * {
     transition: all 0.1s ease-in-out;
@@ -79,14 +79,19 @@ const PostTileStyled = styled(PostTile)`
   text-align: left;
   cursor: default;
   max-width: 325px;
-  font-size: clamp(1em, 0.9em + 1vw * 0.25, 1.5em);
+
+  /* font-size: clamp(1em, 0.9em + 1vw * 0.25, 1.5em); */
+  font-size: 14px;
   border-width: 1px;
+  height: 502px;
 
   @media (width >= 1440px) {
+    font-size: 16px;
     padding: 23px;
     max-width: 384px;
+    height: 522px;
     box-shadow: 8px 8px ${props => props.theme.black};
   }
 `;
 
-export default PostTileStyled;
+export default PostPreviewStyled;

@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { PostTileContext as Context } from "../../PostTile";
+import { PostPreviewContext as Context } from "../../PostPreview";
 import { type PropsWithChildrenClassName } from "react";
 
 const Image = styled.img`
@@ -8,9 +8,9 @@ const Image = styled.img`
 
 const Thumbnail = ({ className }: PropsWithChildrenClassName) => (
   <Context.Consumer>
-    {({ thumb }) => (
+    {({ thumb, title }) => (
       <div className={className}>
-        <Image src={thumb} />
+        <Image src={thumb} alt={title} />
       </div>
     )}
   </Context.Consumer>

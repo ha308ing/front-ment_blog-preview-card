@@ -1,0 +1,15 @@
+HTML {
+  background-repeat: no-repeat;
+  /* Mobile layout by default */
+  background-position: 50% 42px;
+  background-image: url("../../blog-preview-card-main/design/mobile-design.jpg");
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  HTML {
+    /* Desktop layout */
+    background-position: 50% -5px;
+    background-image: url("../../blog-preview-card-main/design/desktop-design.jpg");
+  }
+}

@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { PostTileContext as Context } from "../../PostTile";
+import { PostPreviewContext as Context } from "../../PostPreview";
 import { type PropsWithChildrenClassName } from "react";
 
 const months: Record<number, string> = {
@@ -35,11 +35,10 @@ const PubDateStyled = styled(PubDate)`
   font-size: 0.875em;
   letter-spacing: -0.2px;
   word-spacing: 1px;
+  font-weight: 600;
 
   @media (width >= 1440px) {
     margin-bottom: 20px;
-    font-weight: 500;
-    letter-spacing: -0.1px;
   }
 `;
 

@@ -1,9 +1,9 @@
 import { type PropsWithChildrenClassName } from "react";
-import { PostTileContext as Context } from "../../PostTile";
+import { PostPreviewContext as Context } from "../../PostPreview";
 import { styled } from "styled-components";
 
 const Tag = styled.a`
-  font-weight: 800;
+  font-weight: 900;
   background-color: ${props => props.theme.primary};
   padding: 6px 12px 7px;
   display: inline-block;

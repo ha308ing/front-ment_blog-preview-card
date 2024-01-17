@@ -1,4 +1,4 @@
-import { PostTileContext as Context } from "../../PostTile";
+import { PostPreviewContext as Context } from "../../PostPreview";
 import { styled } from "styled-components";
 
 import AuthorAvatar from "./AuthorAvatar";
@@ -11,7 +11,7 @@ const Author = ({ className }: PropsWithChildrenClassName) => (
     {({ author }) => {
       return (
         <Link href={author.link} className={className}>
-          <AuthorAvatar src={author.avatar} />
+          <AuthorAvatar src={author.avatar} alt={author.name} />
           <AuthorName>{author.name}</AuthorName>
         </Link>
       );
